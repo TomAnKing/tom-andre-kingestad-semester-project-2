@@ -21,10 +21,13 @@ footer {
 
 .footerIcons {
   font-size: 30px;
+  display: block;
+  margin: auto;
 }
 
 main {
   width: 80%;
   margin: auto;
   margin-top: 100px;
+  max-width: 1500px;
 }

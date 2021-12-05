@@ -10,6 +10,25 @@
 .nav-link {
   color: white !important;
   margin-left: 40px;
+
+  @media (max-width: 720px) {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.fas.fa-shopping-bag {
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  background-color: #1f1f1f;
+}
+
+a.nav-link.active {
+  font-weight: bold;
+  background-color: #1f1f1f;
 }
 
 #navbarSupportedContent {
@@ -26,8 +45,4 @@
   font-size: 28px;
   color: white !important;
   margin-left: 50px;
-}
-
-h1 {
-  margin-top: 100px;
 }

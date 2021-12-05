@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/partials/index.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
