@@ -29,7 +29,7 @@ h1.homeHeading {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
-  gap: 2px;
+  gap: 3px;
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
@@ -55,14 +55,14 @@ h1.homeHeading {
   float: left;
 }
 
-.price {
+.featuredPrice {
   float: right;
   text-align: end;
   width: 40%;
   margin-right: 5%;
 }
 
-.title {
+.featuredTitle {
   margin-top: 35px;
   float: right;
   text-align: end;

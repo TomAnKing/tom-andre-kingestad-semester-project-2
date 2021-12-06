@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Cart</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,7 +21,7 @@
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Sneakers</a>
+          <a class="navbar-brand" href="index.html">Sneakers Heaven</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -43,7 +43,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Products</a>
+                <a class="nav-link" href="products.html">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cart.html"
@@ -51,50 +51,39 @@
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Admin | Sign In</a>
+                <a class="nav-link active" href="#">Admin | Sign In</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <main>
-        <h1 class="productsHeader">Products</h1>
-        <input
-          class="searchProducts"
-          placeholder="Search Products title/descrition"
-        />
-        <div class="productsContainer">
-          <div class="product">
-            <img src="featuredProd.jpg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
+        <h1 class="loginHeader">Admin Sign In</h1>
+        <p class="logInText">
+          Enter your username and pasword to grant access to the admin section
+          for adding, editing and deleting products.
+        </p>
+        <form id="loginForm">
+          <div>
+            <label>
+              <p>Username/email</p>
+              <input name="Email" id="email" placeholder="Username/email" />
+            </label>
+            <div class="formError" id="emailError">
+              Please enter a valid email address
+            </div>
           </div>
-          <div class="product">
-            <img src="product1.jpeg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
+          <div>
+            <label>
+              <p>Password</p>
+              <input name="Password" id="password" placeholder="Password" />
+            </label>
+            <div class="formError" id="passwordError">
+              Please enter your password
+            </div>
           </div>
-          <div class="product">
-            <img src="featuredProd.jpg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
-          </div>
-          <div class="product">
-            <img src="product1.jpeg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
-          </div>
-          <div class="product">
-            <img src="featuredProd.jpg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
-          </div>
-          <div class="product">
-            <img src="product1.jpeg" alt="" />
-            <p class="productTitle">Featured Product</p>
-            <p class="productPrice">$199,99</p>
-          </div>
-        </div>
+          <button>Sign In</button>
+        </form>
       </main>
     </div>
     <footer>
