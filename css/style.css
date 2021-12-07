@@ -12,7 +12,7 @@
   margin-left: 40px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 992px) {
   .nav-link {
     text-align: center;
     margin: 0;
@@ -53,6 +53,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,5 +261,121 @@ h1.homeHeading {
 .productPrice {
   font-size: 16px;
   margin-left: 10%;
+}
+
+.productButtons {
+  text-decoration: none;
+  margin-left: 10%;
+  color: white;
+  position: relative;
+}
+
+.productButtons:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#cartButton {
+  background-color: yellow;
+  width: 100%;
+}
+
+#moreButton {
+  background-color: #1f1f1f;
+}
+
+.loginHeader {
+  color: white;
+  text-align: center;
+}
+
+.logInText {
+  color: white;
+  margin-top: 20px;
+  width: 400px;
+  margin-left: 100px;
+}
+
+@media (max-width: 992px) {
+  .logInText {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+.loginMain {
+  margin-top: 150px;
+}
+
+#loginForm {
+  background-color: #2b2b2b;
+  color: white;
+  border-radius: 1em;
+  width: 600px;
+  margin: auto;
+  padding: 3em 0 5em 0;
+}
+
+@media (max-width: 992px) {
+  #loginForm {
+    width: 80%;
+  }
+}
+
+#loginForm label {
+  margin-top: 1%;
+  font-size: 20px;
+  margin-left: 100px;
+}
+
+@media (max-width: 992px) {
+  #loginForm label {
+    width: 100%;
+    margin-left: 10%;
+  }
+}
+
+#loginForm input {
+  width: 400px;
+  opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+  #loginForm input {
+    width: 80%;
+  }
+}
+
+.formError {
+  color: red;
+  margin-left: 100px;
+  display: none;
+  width: 400px;
+}
+
+@media (max-width: 992px) {
+  .formError {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+#loginForm button {
+  margin-left: 100px;
+  margin-top: 1.5em;
+  width: 400px;
+  padding: 0.5em;
+  border: none;
+  font-size: 22px;
+  background-color: yellow;
+  color: #2b2b2b;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  #loginForm button {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

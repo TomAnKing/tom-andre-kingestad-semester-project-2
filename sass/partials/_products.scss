@@ -41,3 +41,24 @@
   font-size: 16px;
   margin-left: 10%;
 }
+
+.productButtons {
+  text-decoration: none;
+  margin-left: 10%;
+  color: white;
+  position: relative;
+}
+
+.productButtons:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#cartButton {
+  background-color: yellow;
+  width: 100%;
+}
+
+#moreButton {
+  background-color: #1f1f1f;
+}
