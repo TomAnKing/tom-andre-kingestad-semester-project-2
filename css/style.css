@@ -175,6 +175,7 @@ h1.homeHeading {
   text-align: end;
   width: 40%;
   margin-right: 5%;
+  color: #1f1f1f;
 }
 
 .featuredTitle {
@@ -183,6 +184,7 @@ h1.homeHeading {
   text-align: end;
   width: 40%;
   margin-right: 5%;
+  color: #1f1f1f;
 }
 
 .allProducts a {
@@ -278,10 +280,12 @@ h1.homeHeading {
 #cartButton {
   background-color: yellow;
   width: 100%;
+  padding: 0px 2em 0px 2em;
 }
 
 #moreButton {
   background-color: #1f1f1f;
+  padding: 0px 2em 0px 2em;
 }
 
 .loginHeader {
@@ -421,6 +425,15 @@ h1.homeHeading {
   font-size: 20px;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+  position: relative;
+}
+
+.productInfo a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 0.5em 2em 0.5em 2em;
 }
 
 .cartHeading {

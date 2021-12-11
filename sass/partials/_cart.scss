@@ -34,6 +34,15 @@
   font-size: 20px;
   -ms-transform: translateY(50%);
   transform: translateY(50%);
+  position: relative;
+}
+
+.productInfo a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 0.5em 2em 0.5em 2em;
 }
 
 .cartHeading {
