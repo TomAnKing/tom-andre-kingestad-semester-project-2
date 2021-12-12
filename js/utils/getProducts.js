@@ -1,4 +1,5 @@
 import { baseUrl } from "../settings/api.js";
+import { saveToStorage } from "./storage.js";
 
 const productKey = "product";
 

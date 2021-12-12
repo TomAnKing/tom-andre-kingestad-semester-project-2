@@ -1,4 +1,5 @@
 import { getProducts } from "./utils/getProducts.js";
+import { addToCart } from "./utils/getProducts.js";
 
 const productsContainer = document.querySelector(".productsContainer");
 
@@ -14,7 +15,7 @@ function displayProducts(products) {
 
   products.forEach((product) => {
     productsContainer.innerHTML += `<div class="product">
-      <a href="productDetail.html"
+      <a href="productDetail.html?id=${product.id}"
       ><img src="http://localhost:1337${product.image.formats.large.url}" alt=""
       /></a>
       <p class="productTitle">${product.title}</p>
@@ -23,8 +24,22 @@ function displayProducts(products) {
       >View Product</a
       >
       <br />
-      <a href="" class="productButtons" id="cartButton">Add To Cart</a>
+      <a class="productButtons" id="cartButton" data-item="${product.id}">Add To Cart</a>
       </div>`;
+  });
+  const btns = document.querySelectorAll(".productButtons");
+
+  btns.forEach(function (id) {
+    id.addEventListener("click", function () {
+      const pro = products.find(
+        (p) => p.id === parseInt(event.target.dataset.item)
+      );
+      if (pro) {
+        addToCart(
+          products.find((p) => p.id === parseInt(event.target.dataset.item))
+        );
+      }
+    });
   });
 }
 

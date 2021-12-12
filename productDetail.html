@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
+    <title></title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,7 +21,7 @@
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Sneakers Heaven</a>
+          <a class="navbar-brand" href="index.html">Sneakers Heaven</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,7 +31,9 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -55,8 +57,36 @@
           </div>
         </div>
       </nav>
-      <main>
+      <main class="detailMain">
         <img src="featuredProd.jpg" alt="" />
+        <p class="detailTitle">Product 1</p>
+        <p class="detailPrice">$199,99</p>
+        <div class="size">
+          <label for="size">Choose Size:</label>
+          <select name="size">
+            <option>5</option>
+            <option>5.5</option>
+            <option>6</option>
+            <option>6.5</option>
+            <option>7</option>
+            <option>7.5</option>
+            <option>8</option>
+            <option>8.5</option>
+            <option>9</option>
+            <option>9.5</option>
+          </select>
+        </div>
+        <a class="addToCartBtn">Add To Cart</a>
+        <p class="detailDescription">
+          "Vestibulum suscipit nulla quis orci. Vivamus aliquet elit ac nisl.
+          Proin magna. Phasellus accumsan cursus velit. Etiam sollicitudin,
+          ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis
+          ante odio sit amet eros.\n\nUt a nisl id ante tempus hendrerit. Nullam
+          dictum felis eu pede mollis pretium. Sed a libero. Nunc nulla. Quisque
+          rutrum.\n\nNullam cursus lacinia erat. Morbi ac felis. Sed aliquam
+          ultrices mauris. Cras non dolor. Nulla facilisi.\n\nPhoto via
+          https://unsplash.com/photos/XZ3EmAIWuz0"
+        </p>
       </main>
     </div>
     <footer>
@@ -69,5 +99,6 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="js/productDetail.js" type="module"></script>
   </body>
 </html>

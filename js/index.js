@@ -8,7 +8,7 @@ async function displayFeatured() {
   products.forEach((product) => {
     featuredProducts.innerHTML += `
     <div class="featuredProduct">
-        <a href="productDetail.html">
+        <a href="productDetail.html?id=${product.id}">
             <img src="http://localhost:1337${product.image.formats.large.url}" alt="" />
             <p class="featuredTitle">${product.title}</p>
             <p class="featuredPrice">$${product.price}</p>
