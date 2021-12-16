@@ -20,7 +20,7 @@ function displayProducts(products) {
       /></a>
       <p class="productTitle">${product.title}</p>
       <p class="productPrice">$${product.price}</p>
-      <a href="productDetail.html" class="productButtons" id="moreButton"
+      <a href="productDetail.html?id=${product.id}" class="productButtons" id="moreButton"
       >View Product</a
       >
       <br />

@@ -1,4 +1,5 @@
 const tokenKey = "token";
+const userKey = "user";
 
 let items = [];
 export function saveToStorage(key, value) {
@@ -6,6 +7,18 @@ export function saveToStorage(key, value) {
 
   items.push(value);
   localStorage.setItem(key, JSON.stringify(items));
+}
+
+export function saveToken(token) {
+  saveAdmin(tokenKey, token);
+}
+
+function saveAdmin(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function saveUser(user) {
+  saveAdmin(userKey, user);
 }
 
 export function clearStorage() {
