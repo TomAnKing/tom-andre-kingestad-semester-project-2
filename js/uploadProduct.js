@@ -4,6 +4,8 @@ import { addData } from "./productConfig.js";
 const uploadForm = document.querySelector("#upload");
 
 const productsContainer = document.querySelector(".productsContainer");
+const products = await getProducts();
+displayProducts(products);
 
 uploadForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -21,9 +23,39 @@ uploadForm.addEventListener("submit", (e) => {
 
   request.setRequestHeader("Authorization", "Bearer " + JSON.parse(token));
   request.send(formData);
+  setTimeout(function () {
+    location.reload();
+  }, 800);
 });
 
-const products = await getProducts();
+const btns = document.querySelectorAll(".productButtons");
+
+btns.forEach(function (id) {
+  id.addEventListener("click", function (e) {
+    const pro = products.find(
+      (p) => p.id === parseInt(event.target.dataset.item)
+    );
+    if (pro) {
+      const token = localStorage.getItem("token");
+      const request = new XMLHttpRequest();
+
+      const id = parseInt(e.target.dataset.item);
+
+      console.log("here");
+
+      request.open("DELETE", "http://localhost:1337/products/" + id);
+
+      request.setRequestHeader("Authorization", "Bearer " + JSON.parse(token));
+
+      if (confirm("Are you sure you want delete this product")) {
+        request.send();
+        setTimeout(function () {
+          location.reload();
+        }, 10);
+      }
+    }
+  });
+});
 
 function displayProducts(products) {
   productsContainer.innerHTML = "";
@@ -43,5 +75,3 @@ function displayProducts(products) {
       </div>`;
   });
 }
-
-displayProducts(products);
