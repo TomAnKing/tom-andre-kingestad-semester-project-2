@@ -21,10 +21,6 @@ export function saveUser(user) {
   saveAdmin(userKey, user);
 }
 
-export function clearStorage() {
-  localStorage.clear();
-}
-
 export function getStorageItem(key) {
   return JSON.parse(localStorage.getItem(key));
 }
@@ -39,16 +35,4 @@ export function removeItem(product) {
     }
   }
   localStorage.setItem("product", JSON.stringify(items));
-}
-
-export function getStorage() {
-  let values = [],
-    keys = Object.keys(localStorage),
-    i = keys.length;
-
-  while (i--) {
-    values.push(localStorage.getItem(keys[i]));
-  }
-
-  return JSON.parse(values);
 }

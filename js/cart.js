@@ -1,5 +1,5 @@
 import { getProducts } from "./utils/getProducts.js";
-import { clearStorage, getStorage } from "./utils/storage.js";
+import { getStorageItem } from "./utils/storage.js";
 import { removeItem } from "./utils/storage.js";
 
 const products = await getProducts();
@@ -20,7 +20,9 @@ function displayStorage() {
   products.forEach((product) => {
     total += parseFloat(product.price);
 
-    const number = getStorage().filter((p) => p.id === product.id).length;
+    const number = getStorageItem("product").filter(
+      (p) => p.id === product.id
+    ).length;
 
     cartContainer.innerHTML += ` <div class="cartProduct">
     <a href="productDetail.html?id=${product.id}">
@@ -53,7 +55,7 @@ function displayStorage() {
 // removes duplicates
 function filterArray() {
   const obj = {};
-  let arr = getStorage();
+  let arr = getStorageItem("product");
 
   for (let i = 0, len = arr.length; i < len; i++) {
     obj[arr[i]["id"]] = arr[i];
@@ -67,7 +69,7 @@ function filterArray() {
 
 function totalPrice() {
   let num = 0;
-  getStorage().forEach((p) => {
+  getStorageItem("product").forEach((p) => {
     num += parseFloat(p.price);
   });
 
