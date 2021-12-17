@@ -11,6 +11,12 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Hina+Mincho&family=Teko:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/7a6d4edc18.js"
       crossorigin="anonymous"
@@ -51,20 +57,37 @@
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Admin | Sign In</a>
+                <a class="nav-link active" href="uploadProducts.html"
+                  >Admin | Sign In</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <main class="editProduct">
+      <main>
         <form id="update" method="put">
-          <input type="file" name="files.image" required />
-          <input type="text" name="title" value="product" required />
-          <input type="text" name="price" value="product" required />
-          <input type="text" name="description" value="product" required />
-          <label for="checkbox">Toggle Featured</label>
-          <input type="checkbox" id="featured" name="featured" />
+          <label>Image<input type="file" name="files.image" required /></label>
+          <label
+            >Title<input type="text" name="title" placeholder="Title" required
+          /></label>
+          <label
+            >Price<input type="text" name="price" placeholder="Price" required
+          /></label>
+          <label
+            >Description<input
+              type="text"
+              name="description"
+              placeholder="Description"
+              required
+          /></label>
+          <label
+            >Toggle Featured<input
+              type="checkbox"
+              id="featured"
+              name="featured"
+          /></label>
+
           <button type="submit">Update</button>
         </form>
       </main>

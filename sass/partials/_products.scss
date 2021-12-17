@@ -15,6 +15,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  @media (max-width: 1460px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -22,19 +25,21 @@
 
 .product {
   background-color: white;
-  border: 1px solid black;
 }
 
 .product img {
   object-fit: cover;
   width: 100%;
-  height: 60%;
+  height: 50%;
+  @media (max-width: 992px) {
+    height: 30%;
+  }
 }
 
 .productTitle {
   font-size: 16px;
   margin-left: 10%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .productPrice {
@@ -44,9 +49,17 @@
 
 .productButtons {
   text-decoration: none;
+  text-align: center;
+  display: block;
   margin-left: 10%;
   color: white;
   position: relative;
+  font-size: 20px;
+  width: 80%;
+  padding: 0.5em 2em 0.5em 2em;
+  @media (max-width: 1180px) {
+    font-size: 16px;
+  }
 }
 
 .productButtons:hover {
@@ -55,12 +68,12 @@
 }
 
 #cartButton {
-  background-color: yellow;
-  width: 100%;
-  padding: 0px 2em 0px 2em;
+  background-color: getColour(button-colour);
+  color: getColour(primary-colour);
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 #moreButton {
-  background-color: #1f1f1f;
-  padding: 0px 2em 0px 2em;
+  background-color: getColour(primary-colour);
 }

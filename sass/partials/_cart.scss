@@ -1,5 +1,5 @@
 .cartMain {
-  background-color: #2b2b2b;
+  background-color: getColour(secondary-colour);
   border-radius: 1em;
   color: white;
 }
@@ -11,7 +11,7 @@
 }
 
 .cartProduct {
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 2px solid getColour(primary-colour);
   width: 90%;
   margin-left: 5%;
 }
@@ -24,7 +24,9 @@
   margin-bottom: 10px;
   margin-left: 5%;
   @media (max-width: 992px) {
-    height: 100px;
+    height: 300px;
+    width: 90%;
+    float: none;
   }
 }
 
@@ -35,13 +37,21 @@
   -ms-transform: translateY(50%);
   transform: translateY(50%);
   position: relative;
+  @media (max-width: 992px) {
+    transform: none;
+    -ms-transform: none;
+    font-size: 16px;
+    float: none;
+    margin-left: 5%;
+    margin-bottom: 10px;
+  }
 }
 
 .productInfo a {
   text-decoration: none;
   color: #1f1f1f;
   font-weight: bold;
-  background-color: yellow;
+  background-color: getColour(button-colour);
   padding: 0.5em 2em 0.5em 2em;
 }
 
@@ -50,7 +60,7 @@
   margin-left: 5%;
   width: 90%;
   padding-bottom: 10px;
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 2px solid getColour(primary-colour);
 }
 
 .totalPrice {
@@ -66,7 +76,7 @@
 }
 
 .fa-trash-alt {
-  background-color: #1f1f1f;
+  background-color: getColour(primary-colour);
   padding: 0.7em;
 }
 

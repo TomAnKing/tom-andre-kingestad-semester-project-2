@@ -23,7 +23,6 @@ function displayProducts(products) {
       <a href="productDetail.html?id=${product.id}" class="productButtons" id="moreButton"
       >View Product</a
       >
-      <br />
       <a class="productButtons" id="cartButton" data-item="${product.id}">Add To Cart</a>
       </div>`;
   });

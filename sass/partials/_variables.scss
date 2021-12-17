@@ -1,11 +1,14 @@
 $colours: (
-  primary-colour: #e92569,
-  secondary-colour: #767676,
-  header-colour: #efefef,
-  title-colour: #0a0a0a,
-  url-colour: #c7c7c7,
+  primary-colour: #1f1f1f,
+  secondary-colour: #2b2b2b,
+  nav-footer-colour: black,
+  button-colour: #ffdf00,
 );
 
 @function getColour($colour) {
   @return map-get($colours, $colour);
 }
+
+$brand-font: "Teko", sans-serif;
+$header-font: "Hina Mincho", serif;
+$body-font: "Abel", sans-serif;

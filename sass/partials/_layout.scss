@@ -6,6 +6,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1f1f1f;
+  font-family: $body-font;
+  font-size: 20px;
 }
 
 .wrapper {
@@ -23,10 +25,12 @@ footer {
 
 h1 {
   color: white;
+  font-family: $brand-font;
 }
 
 h2 {
   color: white;
+  font-family: $brand-font;
 }
 
 .footerIcons {
@@ -47,4 +51,22 @@ main {
 
 a:hover {
   cursor: pointer;
+}
+
+.loader {
+  border: 9px solid white;
+  border-top: 9px solid yellow;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

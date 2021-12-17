@@ -1,10 +1,5 @@
-body.homeBody {
-  background-color: #1f1f1f;
-}
-
 h1.homeHeading {
   font-size: 38px;
-  color: white;
   margin-top: 15px;
 }
 
@@ -60,7 +55,7 @@ h1.homeHeading {
   text-align: end;
   width: 40%;
   margin-right: 5%;
-  color: #1f1f1f;
+  color: getColour(primary-colour);
 }
 
 .featuredTitle {
@@ -69,20 +64,23 @@ h1.homeHeading {
   text-align: end;
   width: 40%;
   margin-right: 5%;
-  color: #1f1f1f;
+  color: getColour(primary-colour);
 }
 
 .allProducts a {
-  color: yellow;
+  background-color: getColour(button-colour);
+  color: getColour(primary-colour);
   text-decoration: none;
   font-size: 26px;
-  border: 4px solid yellow;
-  padding: 6px;
-  border-radius: 15px;
+  font-weight: bold;
+  padding: 0.5em 2em 0.5em 2em;
   text-align: center;
+  display: inline-block;
 }
 
 .allProducts {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
 }

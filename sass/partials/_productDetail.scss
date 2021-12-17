@@ -1,5 +1,5 @@
 .detailMain {
-  background-color: #2b2b2b;
+  background-color: getColour(secondary-colour);
   border-radius: 1em;
   color: white;
   min-height: 600px;
@@ -51,11 +51,11 @@
   }
   a {
     text-decoration: none;
-    color: #1f1f1f;
+    color: getColour(primary-colour);
     font-weight: bold;
     font-size: 20px;
     padding: 0.5em 2em 0.5em 2em;
-    background-color: yellow;
+    background-color: getColour(button-colour);
     float: right;
     margin-right: 5%;
     margin-top: 20px;
