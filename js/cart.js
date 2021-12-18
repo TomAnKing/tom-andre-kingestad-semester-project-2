@@ -17,7 +17,10 @@ function displayStorage() {
 
   const products = filterArray();
 
-  if (!products) return;
+  if (!products || products.length === 0) {
+    cartContainer.innerHTML = `<div class="emptyCart">No Products added to cart</div>`;
+    return;
+  }
 
   products.forEach((product) => {
     total += parseFloat(product.price);

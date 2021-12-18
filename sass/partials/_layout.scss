@@ -5,7 +5,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #1f1f1f;
+  background-color: getColour(primary-colour);
   font-family: $body-font;
   font-size: 20px;
 }
@@ -19,8 +19,14 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
-  background-color: black !important;
+  background-color: getColour(nav-footer-colour);
   color: white;
+  font-size: 16px;
+  padding: 2em 0 2em 0;
+  font-family: $body-font;
+  @media (max-width: 992px) {
+    display: block;
+  }
 }
 
 h1 {
@@ -34,9 +40,38 @@ h2 {
 }
 
 .footerIcons {
-  font-size: 30px;
-  display: block;
-  margin: auto;
+  font-size: 25px;
+  margin-left: 5%;
+  @media (max-width: 992px) {
+    text-align: center;
+    margin: 0%;
+  }
+}
+
+#footerCopyright {
+  margin-right: 5%;
+  @media (max-width: 992px) {
+    float: right;
+    margin-right: 2%;
+    margin-top: 1em;
+  }
+}
+
+#footerEmail {
+  text-align: center;
+  @media (max-width: 992px) {
+    float: left;
+    margin-left: 2%;
+    margin-top: 1em;
+  }
+}
+
+#instagram {
+  margin-right: 7px;
+}
+
+#twitter {
+  margin-left: 7px;
 }
 
 main {

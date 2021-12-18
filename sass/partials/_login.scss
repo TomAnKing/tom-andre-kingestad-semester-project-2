@@ -15,6 +15,17 @@
 
 .loginMain {
   margin-top: 150px;
+
+  .messageContainer {
+    font-size: 26px;
+    margin-left: 100px;
+    color: #d8000c;
+    background-color: #ffd2d2;
+    width: 400px;
+    @media (max-width: 992px) {
+      margin-left: 10%;
+    }
+  }
 }
 
 #loginForm {
@@ -47,24 +58,14 @@
   }
 }
 
-.formError {
-  color: red;
-  margin-left: 100px;
-  display: none;
-  width: 400px;
-  @media (max-width: 992px) {
-    width: 80%;
-    margin-left: 10%;
-  }
-}
-
 #loginForm button {
   margin-left: 100px;
   margin-top: 1.5em;
+  font-weight: bold;
   width: 400px;
   padding: 0.5em;
   border: none;
-  font-size: 22px;
+  font-size: 24px;
   background-color: getColour(button-colour);
   color: getColour(primary-colour);
   font-weight: bold;

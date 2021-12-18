@@ -16,7 +16,7 @@ function displayProducts(products) {
   products.forEach((product) => {
     productsContainer.innerHTML += `<div class="product">
       <a href="productDetail.html?id=${product.id}"
-      ><img src="http://localhost:1337${product.image.formats.large.url}" alt=""
+      ><img src="http://localhost:1337${product.image.formats.large.url}" alt="${product.image.alternativeText}"
       /></a>
       <p class="productTitle">${product.title}</p>
       <p class="productPrice">$${product.price}</p>

@@ -1,5 +1,5 @@
 .bg-light {
-  background-color: black !important;
+  background-color: #121212 !important;
 }
 
 .navbar {
@@ -45,7 +45,7 @@ a.nav-link.active {
 }
 
 .navbar-brand {
-  font-size: 28px;
+  font-size: 38px;
   color: white !important;
   margin-left: 50px;
   font-family: "Teko", sans-serif;
@@ -91,8 +91,17 @@ footer {
           justify-content: space-between;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-color: black !important;
+  background-color: #121212;
   color: white;
+  font-size: 16px;
+  padding: 2em 0 2em 0;
+  font-family: "Abel", sans-serif;
+}
+
+@media (max-width: 992px) {
+  footer {
+    display: block;
+  }
 }
 
 h1 {
@@ -106,9 +115,47 @@ h2 {
 }
 
 .footerIcons {
-  font-size: 30px;
-  display: block;
-  margin: auto;
+  font-size: 25px;
+  margin-left: 5%;
+}
+
+@media (max-width: 992px) {
+  .footerIcons {
+    text-align: center;
+    margin: 0%;
+  }
+}
+
+#footerCopyright {
+  margin-right: 5%;
+}
+
+@media (max-width: 992px) {
+  #footerCopyright {
+    float: right;
+    margin-right: 2%;
+    margin-top: 1em;
+  }
+}
+
+#footerEmail {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  #footerEmail {
+    float: left;
+    margin-left: 2%;
+    margin-top: 1em;
+  }
+}
+
+#instagram {
+  margin-right: 7px;
+}
+
+#twitter {
+  margin-left: 7px;
 }
 
 main {
@@ -161,7 +208,7 @@ a:hover {
 }
 
 h1.homeHeading {
-  font-size: 38px;
+  font-size: 46px;
   margin-top: 15px;
 }
 
@@ -178,7 +225,7 @@ h1.homeHeading {
 
 .featuredHeading {
   color: white;
-  font-size: 30px;
+  font-size: 36px;
   margin-top: 40px;
 }
 
@@ -228,6 +275,7 @@ h1.homeHeading {
   width: 40%;
   margin-right: 5%;
   color: #1f1f1f;
+  font-size: 20px;
 }
 
 .featuredTitle {
@@ -237,6 +285,7 @@ h1.homeHeading {
   width: 40%;
   margin-right: 5%;
   color: #1f1f1f;
+  font-size: 24px;
 }
 
 .allProducts a {
@@ -290,7 +339,7 @@ h1.homeHeading {
   gap: 40px;
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1476px) {
   .productsContainer {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
@@ -306,6 +355,9 @@ h1.homeHeading {
 
 .product {
   background-color: white;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .product img {
@@ -322,13 +374,13 @@ h1.homeHeading {
 }
 
 .productTitle {
-  font-size: 16px;
+  font-size: 26px;
   margin-left: 10%;
   margin-top: 10px;
 }
 
 .productPrice {
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 10%;
 }
 
@@ -339,7 +391,7 @@ h1.homeHeading {
   margin-left: 10%;
   color: white;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
   width: 80%;
   padding: 0.5em 2em 0.5em 2em;
 }
@@ -360,6 +412,7 @@ h1.homeHeading {
   color: #1f1f1f;
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 2em;
 }
 
 #moreButton {
@@ -386,6 +439,20 @@ h1.homeHeading {
 
 .loginMain {
   margin-top: 150px;
+}
+
+.loginMain .messageContainer {
+  font-size: 26px;
+  margin-left: 100px;
+  color: #d8000c;
+  background-color: #ffd2d2;
+  width: 400px;
+}
+
+@media (max-width: 992px) {
+  .loginMain .messageContainer {
+    margin-left: 10%;
+  }
 }
 
 #loginForm {
@@ -427,27 +494,14 @@ h1.homeHeading {
   }
 }
 
-.formError {
-  color: red;
-  margin-left: 100px;
-  display: none;
-  width: 400px;
-}
-
-@media (max-width: 992px) {
-  .formError {
-    width: 80%;
-    margin-left: 10%;
-  }
-}
-
 #loginForm button {
   margin-left: 100px;
   margin-top: 1.5em;
+  font-weight: bold;
   width: 400px;
   padding: 0.5em;
   border: none;
-  font-size: 22px;
+  font-size: 24px;
   background-color: #ffdf00;
   color: #1f1f1f;
   font-weight: bold;
@@ -501,9 +555,9 @@ h1.homeHeading {
 .productInfo {
   float: right;
   margin-right: 5%;
-  font-size: 20px;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  font-size: 24px;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
   position: relative;
 }
 
@@ -512,7 +566,7 @@ h1.homeHeading {
     -webkit-transform: none;
             transform: none;
     -ms-transform: none;
-    font-size: 16px;
+    font-size: 20px;
     float: none;
     margin-left: 5%;
     margin-bottom: 10px;
@@ -545,6 +599,7 @@ h1.homeHeading {
   margin-left: 10%;
   margin-top: 10px;
   padding-bottom: 10px;
+  font-size: 40px;
 }
 
 .fa-trash-alt {
@@ -555,6 +610,12 @@ h1.homeHeading {
 .fa-trash-alt:hover {
   cursor: pointer;
   background-color: #2f2f2f;
+}
+
+.emptyCart {
+  margin-left: 5%;
+  font-size: 24px;
+  padding-bottom: 2em;
 }
 
 .detailMain {
@@ -631,7 +692,7 @@ h1.homeHeading {
   text-decoration: none;
   color: #1f1f1f;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   padding: 0.5em 2em 0.5em 2em;
   background-color: #ffdf00;
   float: right;
@@ -686,9 +747,17 @@ h1.homeHeading {
   border: none;
   font-weight: bold;
   padding: 0.5em 2em 0.5em 2em;
-  width: 60%;
-  margin-left: 20%;
+  width: 40%;
+  margin-left: 30%;
   margin-top: 2em;
+}
+
+@media (max-width: 992px) {
+  #upload button,
+  #update button {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 
 #upload input,
@@ -699,5 +768,9 @@ h1.homeHeading {
 
 .editHeader {
   margin-top: 2em;
+}
+
+.uploadMain {
+  margin-bottom: 4em;
 }
 /*# sourceMappingURL=style.css.map */

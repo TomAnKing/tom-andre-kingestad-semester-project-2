@@ -20,7 +20,7 @@ export async function fetchProduct() {
   try {
     productContainer.innerHTML = "";
 
-    productContainer.innerHTML = `<img src="http://localhost:1337${product.image.formats.large.url}" alt="" />
+    productContainer.innerHTML = `<img src="http://localhost:1337${product.image.formats.large.url}" alt="${product.image.alternativeText}" />
       <p class="detailTitle">${product.title}</p>
       <p class="detailPrice">$${product.price}</p>
       <div class="size">

@@ -1,5 +1,6 @@
 import { getProducts } from "./utils/getProducts.js";
 import { baseUrl } from "./settings/api.js";
+import displayMessage from "./components/displayMessage.js";
 
 const heroImage = document.querySelector(".heroImage");
 
@@ -12,7 +13,7 @@ async function displayFeatured() {
     featuredProducts.innerHTML += `
     <div class="featuredProduct">
         <a href="productDetail.html?id=${product.id}">
-            <img src="http://localhost:1337${product.image.formats.large.url}" alt="" />
+            <img src="http://localhost:1337${product.image.formats.large.url}" alt="${product.image.alternativeText}" />
             <p class="featuredTitle">${product.title}</p>
             <p class="featuredPrice">$${product.price}</p>
         </a>
@@ -33,7 +34,7 @@ async function displayHeroImage() {
 
     heroImage.innerHTML = "";
 
-    heroImage.innerHTML += `<img src="http://localhost:1337${page.hero_banner.url}" class="heroImg" alt="" />`;
+    heroImage.innerHTML += `<img src="http://localhost:1337${page.hero_banner.url}" class="heroImg" alt="${page.hero_banner_alt_text}" />`;
   } catch (error) {
     console.log("error");
   }

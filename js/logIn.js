@@ -4,9 +4,7 @@ import { saveToken, saveUser } from "./utils/storage.js";
 
 const form = document.querySelector("#loginForm");
 const userName = document.querySelector("#email");
-const userNameError = document.querySelector("#emailError");
 const password = document.querySelector("#password");
-const passwordError = document.querySelector("#passwordError");
 const message = document.querySelector(".messageContainer");
 
 form.addEventListener("submit", validateForm);

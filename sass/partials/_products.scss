@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  @media (max-width: 1460px) {
+  @media (max-width: 1476px) {
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 992px) {
@@ -25,6 +25,7 @@
 
 .product {
   background-color: white;
+  min-height: fit-content;
 }
 
 .product img {
@@ -37,13 +38,13 @@
 }
 
 .productTitle {
-  font-size: 16px;
+  font-size: 26px;
   margin-left: 10%;
   margin-top: 10px;
 }
 
 .productPrice {
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 10%;
 }
 
@@ -54,7 +55,7 @@
   margin-left: 10%;
   color: white;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
   width: 80%;
   padding: 0.5em 2em 0.5em 2em;
   @media (max-width: 1180px) {
@@ -72,6 +73,7 @@
   color: getColour(primary-colour);
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 2em;
 }
 
 #moreButton {
