@@ -1,4 +1,7 @@
 import { getProducts } from "./utils/getProducts.js";
+import { baseUrl } from "./settings/api.js";
+
+const heroImage = document.querySelector(".heroImage");
 
 const featuredProducts = document.querySelector(".featuredProducts");
 
@@ -18,3 +21,20 @@ async function displayFeatured() {
 }
 
 displayFeatured();
+
+displayHeroImage();
+
+async function displayHeroImage() {
+  const url = baseUrl + "home";
+  try {
+    const response = await fetch(url);
+
+    const page = await response.json();
+
+    heroImage.innerHTML = "";
+
+    heroImage.innerHTML += `<img src="http://localhost:1337${page.hero_banner.url}" class="heroImg" alt="" />`;
+  } catch (error) {
+    console.log("error");
+  }
+}
