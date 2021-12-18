@@ -17,6 +17,8 @@ function displayStorage() {
 
   const products = filterArray();
 
+  if (!products) return;
+
   products.forEach((product) => {
     total += parseFloat(product.price);
 
@@ -56,7 +58,7 @@ function displayStorage() {
 function filterArray() {
   const obj = {};
   let arr = getStorageItem("product");
-
+  if (!arr) return;
   for (let i = 0, len = arr.length; i < len; i++) {
     obj[arr[i]["id"]] = arr[i];
   }

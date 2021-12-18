@@ -3,6 +3,9 @@ const userKey = "user";
 
 let items = [];
 export function saveToStorage(key, value) {
+  if (!getStorageItem(key)) {
+    localStorage.setItem(key, JSON.stringify(items));
+  }
   items = JSON.parse(localStorage.getItem(key));
 
   items.push(value);
@@ -23,6 +26,10 @@ export function saveUser(user) {
 
 export function getStorageItem(key) {
   return JSON.parse(localStorage.getItem(key));
+}
+
+export function removeUser(key) {
+  localStorage.removeItem(key);
 }
 
 export function removeItem(product) {
