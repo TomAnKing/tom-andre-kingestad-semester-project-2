@@ -62,7 +62,7 @@ To run the app, run the following command in the strapi file terminal:
 npm run develop
 ```
 
-Then you will be able to open a live server on the Snaekers Heaven project to get full functionality.
+Then you will be able to open a live server on the Snaekers Heaven project file to get full functionality.
 
 ## Contributing
 
